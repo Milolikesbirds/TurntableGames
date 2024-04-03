@@ -47,6 +47,19 @@ player.color("white")
 player.penup()
 player.goto(0, -400)
 
+hurdle = turtle.Turtle()
+hurdle.speed(3)
+hurdle.shape("square")
+hurdle.shapesize(stretch_wid=4, stretch_len=10)
+hurdle.color("white")
+hurdle.penup()
+hurdle.goto(0, -400)
+
+def __init__ spawnhurdle(self)
+    
+
+    
+
 # Initialize the score
 score = 0
 
@@ -59,7 +72,7 @@ sketch.penup()
 sketch.hideturtle()
 sketch.goto(0, 450)
 sketch.write(
-    "Score: 0",
+    "Score:" score,
     align="center",
     font=("Terminal", 24, "normal"),
 )
@@ -96,5 +109,7 @@ while True:
                     playerx =1
                 if playerx < -1:
                     playerx = -1
+    time.sleep(0.1)
+    score +=1 
         elif msg.type == "note_on" and msg.note == 18:
             exit()
